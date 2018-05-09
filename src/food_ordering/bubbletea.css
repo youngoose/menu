@@ -1,0 +1,71 @@
+.mainFxmlClass {
+    -fx-background-color: #FE407E;
+    -fx-border-radius: 5;
+}
+
+.gridPane {
+    -fx-background-color: #FFDCE8;
+    -fx-background-radius: 5;
+}
+
+.sublogo {
+    -fx-font-size: 20pt;
+    -fx-text-fill: #FFF;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-text-fill: #91E345;
+    -fx-font-size: 16pt;
+    -fx-font-weight: bold;
+}
+
+.ingredient {
+    -fx-text-fill: #FFF;
+}
+
+.step {
+    -fx-text-fill: #FE407E;
+    -fx-font-weight: bold;
+    -fx-font-size: 15pt;
+}
+
+.navigationAndAdd {
+    -fx-background-color: #F16A70;
+    -fx-text-fill: #FFF;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFF;
+    -fx-border-radius: 3;
+    -fx-border-width: 2px;
+}
+
+.navigationAndAdd:hover {
+    -fx-border-color: yellow;
+    -fx-border-radius: 3;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+
+#special {
+    -fx-font-style: italic;
+}
+
+#quantity {
+    -fx-font-weight: bold;
+}
+
+#checkout {
+    -fx-background-color: orange;
+    -fx-text-fill: #FFF;
+    -fx-font-weight: bold;
+    -fx-border-color: #FFF;
+    -fx-border-radius: 3;
+    -fx-border-width: 2px;
+}
+
+#checkout:hover {
+    -fx-border-color: yellow;
+    -fx-border-radius: 2;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}

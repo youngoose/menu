@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="808.0" prefWidth="765.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="food_ordering.BubbleTeaController">
+    <stylesheets>
+        <URL value="@bubbletea.css" />
+    </stylesheets>
+    <children>
+        <GridPane layoutX="31.0" layoutY="159.0" prefHeight="501.0" prefWidth="700.0" styleClass="gridPane">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="138.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="144.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+         <children>
+            <Label styleClass="step" text="Step 1 Choose your size" textAlignment="CENTER" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets left="10.0" top="25.0" />
+               </GridPane.margin>
+            </Label>
+            <RadioButton fx:id="small" mnemonicParsing="false" text="Small   $2.99" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="size" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="medium" mnemonicParsing="false" text="Medium   $3.39" toggleGroup="$size" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="large" mnemonicParsing="false" text="Large   $3.79" toggleGroup="$size" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <AnchorPane GridPane.columnIndex="4" GridPane.rowIndex="9">
+               <children>
+                  <TextField fx:id="tquantity" layoutY="10.0" prefHeight="15.0" prefWidth="50.0" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+               </children>
+            </AnchorPane>
+            <Label id="quantity" alignment="CENTER" contentDisplay="CENTER" text="QUANTITY:" textAlignment="JUSTIFY" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label styleClass="step" text="Step 2 Choose your tea" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" top="25.0" />
+               </GridPane.margin>
+            </Label>
+            <RadioButton fx:id="jasmine" mnemonicParsing="false" text="Jasmine Green Tea" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tea" />
+               </toggleGroup>
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="black" mnemonicParsing="false" text="Black Assam Tea" toggleGroup="$tea" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <RadioButton fx:id="earl" mnemonicParsing="false" text="Earl Grey Tea" toggleGroup="$tea" GridPane.columnSpan="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <Label styleClass="step" text="Step 3 Choose your flavour" GridPane.columnSpan="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" top="25.0" />
+               </GridPane.margin>
+            </Label>
+            <CheckBox fx:id="milk" mnemonicParsing="false" text="MILK" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="cream" mnemonicParsing="false" text="CREAM" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="-5.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="honey" mnemonicParsing="false" text="HONEY" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="hazelnut" mnemonicParsing="false" text="HAZELNUT" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <Label id="special" styleClass="step" text="Special Topping (Extra charge)" GridPane.columnSpan="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="10.0" top="25.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="javachip" mnemonicParsing="false" text="JAVA CHIP   +$0.5" GridPane.columnSpan="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <CheckBox fx:id="fruit" mnemonicParsing="false" text="TROPICAL FRUIT   +$0.8" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="59.0" />
+               </GridPane.margin>
+            </CheckBox>
+            <ImageView fitHeight="238.0" fitWidth="355.0" pickOnBounds="true" styleClass="teaImg" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@../images/tea.jpg" />
+               </image>
+            </ImageView>
+         </children>
+        </GridPane>
+        <Button layoutX="683.0" layoutY="29.0" mnemonicParsing="false" onAction="#GoToBentoPage" styleClass="navigationAndAdd" text="Bento" />
+      <Label layoutX="181.0" layoutY="47.0" styleClass="sublogo" text="Asian Cuisine &amp; Beverage" />
+      <Label layoutX="31.0" layoutY="107.0" styleClass="subtitle" text="Create your own bubble tea!" />
+      <Button fx:id="addTeaOrder" layoutX="579.0" layoutY="751.0" mnemonicParsing="false" onAction="#addBubbleTea" styleClass="navigationAndAdd" text="ADD" />
+      <Button id="checkout" layoutX="641.0" layoutY="751.0" mnemonicParsing="false" onAction="#GoToCheckOut" text="CHECKOUT" />
+      <Button layoutX="602.0" layoutY="29.0" mnemonicParsing="false" onAction="#GoToNoodlePage" styleClass="navigationAndAdd" text="Noodle" />
+      <Label layoutX="31.0" layoutY="133.0" styleClass="ingredient" text="Basic Ingredients - flavoured powder, syrup, jelly" />
+      <ImageView fitHeight="53.0" fitWidth="149.0" layoutX="20.0" layoutY="36.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/logo.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
